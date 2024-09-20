@@ -1,0 +1,6 @@
+{
+  "page" : "1",
+  "limit" : "20",
+  "sortDirection" : "DESC",
+  "sortAttribute" : "id"
+}

@@ -4,14 +4,14 @@ import com.shaft.driver.SHAFT;
 import io.restassured.http.ContentType;
 import org.json.simple.JSONObject;
 
-public class salaryAdvanceRequests {
+public class SalaryAdvanceRequests {
 
     private SHAFT.API apiObject;
-    public salaryAdvanceRequests(SHAFT.API apiObject){
+    public SalaryAdvanceRequests(SHAFT.API apiObject){
         this.apiObject = apiObject;
     }
 
-    private String salaryAdvanceEndpoint = "admin/requests/salary-advance";
+    private String salaryAdvanceEndpoint = "/admin/requests/salary-advance";
 
     public void getAllSalaryAdvanceRequests(String page,String limit,String sortDirection,String sortAttribute){
         apiObject

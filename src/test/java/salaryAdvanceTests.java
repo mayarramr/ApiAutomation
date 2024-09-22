@@ -1,5 +1,5 @@
 import com.shaft.driver.SHAFT;
-import features.portalFeatures.salaryAdvanceRequests;
+import features.portalFeatures.SalaryAdvanceRequests;
 import objectModel.KhaznaApi;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -7,10 +7,9 @@ import org.testng.annotations.Test;
 public class salaryAdvanceTests {
 
     private SHAFT.API apiObject;
-    private salaryAdvanceRequests salaryAdvanceFeatures;
+    private SalaryAdvanceRequests salaryAdvanceFeatures;
     SHAFT.TestData.JSON authData;
     SHAFT.TestData.JSON SAdata;
-
     String page;
     String limit;
     String sortDirection;
@@ -29,7 +28,7 @@ public class salaryAdvanceTests {
         sortAttribute = SAdata.getTestData("sortAttribute");
         KhaznaApi api = new KhaznaApi(apiObject);
         api.login(username, password);
-        salaryAdvanceFeatures = new salaryAdvanceRequests(apiObject);
+        salaryAdvanceFeatures = new SalaryAdvanceRequests(apiObject);
     }
 
     @Test

@@ -14,23 +14,17 @@ public class SalaryAdvanceRequests {
     private String salaryAdvanceEndpoint = "/admin/requests/salary-advance";
 
     public void getAllSalaryAdvanceRequests(String page,String limit,String sortDirection,String sortAttribute){
-        apiObject
-                .post(salaryAdvanceEndpoint)
-                .setContentType(ContentType.JSON)
-                .setTargetStatusCode(200)
-                .setRequestBody(setSalaryAdvanceRequestBody(page , limit , sortDirection , sortAttribute))
-                .perform();
-    }
-
-
-    public JSONObject setSalaryAdvanceRequestBody(String page,String limit,String sortDirection,String sortAttribute){
         JSONObject salaryAdvanceReq = new JSONObject();
         salaryAdvanceReq.put("page" , page);
         salaryAdvanceReq.put("limit" , limit);
         salaryAdvanceReq.put("sortDirection" , sortDirection);
         salaryAdvanceReq.put("sortAttribute" , sortAttribute);
-
-        return salaryAdvanceReq;
+        apiObject
+                .post(salaryAdvanceEndpoint)
+                .setContentType(ContentType.JSON)
+                .setTargetStatusCode(200)
+                .setRequestBody(salaryAdvanceReq)
+                .perform();
     }
 
 }

@@ -4,7 +4,7 @@ import objectModel.KhaznaApi;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class salaryAdvanceTests {
+public class SalaryAdvanceTests {
 
     private SHAFT.API apiObject;
     private SalaryAdvanceRequests salaryAdvanceFeatures;

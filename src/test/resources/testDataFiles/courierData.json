@@ -1,0 +1,15 @@
+{
+  "company_id": "1000429",
+  "full_name": "mona",
+  "hr_code": "13241324132413",
+  "mobile_num": "01006566548",
+  "nat_id": "30006180101252",
+  "natid_image_back": "9654af16-0316-4a3e-b0ea-3f59df7770db.jpg",
+  "natid_image_front": "03750_realmoflight_1920x1200.jpg",
+  "first_name" : "mona",
+  "last_name" : "ahmed",
+  "house_no" : "12",
+  "job" : "Tester",
+  "natid_expiry_date" : "1737842400000",
+  "street_name" : "obour"
+}

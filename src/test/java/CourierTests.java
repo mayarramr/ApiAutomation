@@ -21,7 +21,8 @@ public class CourierTests {
     String hrCode;
     String nationalID;
     String mobileNumber;
-    List<List<Object>> images;
+    String natBackImage;
+    String natFrontImage;
 
     String firstName;
     String lastName;
@@ -46,8 +47,8 @@ public class CourierTests {
         mobileNumber = courierData.getTestData("mobile_num");
         frontImage = courierData.getTestData("natid_image_front");
         backImage = courierData.getTestData("natid_image_back");
-        images = Arrays.asList(Arrays.asList("natid_image_front" , frontImage) , Arrays.asList("natid_image_back" , backImage));
-
+        natBackImage = System.getProperty("user.dir") + courierData.getTestData("natid_image_back");
+        natFrontImage = System.getProperty("user.dir") + courierData.getTestData("natid_image_front");
         firstName = courierData.getTestData("natid_image_back");
         lastName = courierData.getTestData("natid_image_back");
         job = courierData.getTestData("natid_image_back");
@@ -65,7 +66,7 @@ public class CourierTests {
 
     @Test
     public void verifyCourierUser() {
-        courierFeatures.addCourierUser(companyId, hrCode, fullName, mobileNumber, nationalID, images.toString());
+        courierFeatures.addCourierUser(fullName, mobileNumber, companyId ,nationalID, natBackImage ,  natFrontImage);
     }
 
     @Test

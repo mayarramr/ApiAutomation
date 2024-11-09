@@ -40,7 +40,7 @@ public class SavingsTests {
 
     @Test
     public void verifyFilteringSavings(){
-        savingsFeature.filterSavings( limit , page , sortAttribute , sortDirection);
+        savingsFeature.filterSavings(limit , page , sortAttribute , sortDirection);
     }
 
     @Test

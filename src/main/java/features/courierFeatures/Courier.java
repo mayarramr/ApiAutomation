@@ -13,6 +13,7 @@ public class Courier {
     }
 
     private String courierEndpoint = "/admin/khazna/courier/companies?lang=ar";
+    private String courierUserEndpoint = "/admin/khazna/courier/user";
     private String courierUserInfoEndpoint = "/admin/khazna/courier/user/1604077/card/inquiry?lang=ar";
 
 
@@ -23,14 +24,21 @@ public class Courier {
                 .perform();
     }
 
-    public void addCourierUser(String companyId , String fullName , String hrCode , String nationalId , String natIdBackImage , String natIdFrontImage) {
+    public void addCourierUser( String fullName ,String mobileNumber, String companyId , String nationalId , String natIdBackImage , String natIdFrontImage) {
         JSONObject userCourierData = new JSONObject();
         userCourierData.put("company_id", companyId);
         userCourierData.put("full_name", fullName);
-        userCourierData.put("hr_code", hrCode);
+        userCourierData.put("mobile_num", mobileNumber);
         userCourierData.put("nat_id", nationalId);
         userCourierData.put("natid_image_back", natIdBackImage);
         userCourierData.put("natid_image_front", natIdFrontImage);
+
+        apiObject
+                .post(courierUserEndpoint)
+                .setContentType(ContentType.JSON)
+                .setRequestBody(userCourierData)
+                .setTargetStatusCode(201)
+                .perform();
 
     }
 

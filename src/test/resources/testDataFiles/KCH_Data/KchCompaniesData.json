@@ -1,3 +1,12 @@
-  {
-    "id" : "1000429"
-  }
+{
+  "compId": "1000465",
+  "payrollTime" : "1728162000000",
+  "limit": "20",
+  "page": "1",
+  "sortAttribute": "id",
+  "sortDirection": "DESC",
+  "status": "6",
+  "auto_deduction" : false,
+  "KchFile" : "/kchBatches/import-kch_sample_04_11_2024.csv",
+  "batchId" : 2105
+}
